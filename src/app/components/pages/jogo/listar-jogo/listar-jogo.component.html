@@ -1,0 +1,24 @@
+<mat-card class="container">
+  <mat-card-content> 
+    <table>
+      <tr>
+        <th>#</th>
+        <th>Selecão A</th>
+        <th></th>
+        <th>Placar</th>
+        <th></th>
+        <th>Selecão B</th>
+        <th></th>
+      </tr>
+      <tr *ngFor="let jogo of jogos">
+        <td>{{ jogo.id }}</td>
+        <td>{{ jogo.selecaoA?.nome }}</td>
+        <td>{{ jogo.selecaoAGol }}</td>
+        <td> X </td>
+        <td>{{ jogo.selecaoBGol }}</td>
+        <td>{{ jogo.selecaoB?.nome }}</td>
+        <td><button mat-raised-button color="warn" id="btnPalpitar" (click)="palpitar(jogo)">Palpite</button></td>
+      </tr>
+    </table>
+  </mat-card-content>
+</mat-card>
