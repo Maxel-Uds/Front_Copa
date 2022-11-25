@@ -13,8 +13,8 @@ export class PalpitarJogoComponent implements OnInit {
 
   selecaoA?: string;
   selecaoB?: string;
-  placarA!: number;
-  placarB!: number;
+  placarA?: number;
+  placarB?: number;
   id!: number;
   jogo!: Jogo;
 
@@ -31,6 +31,8 @@ export class PalpitarJogoComponent implements OnInit {
               this.id = id;
               this.selecaoA = jogo.selecaoA?.nome;
               this.selecaoB = jogo.selecaoB?.nome;
+              this.placarA = jogo.selecaoAGol;
+              this.placarB = jogo.selecaoBGol;
             }
           });
         }
